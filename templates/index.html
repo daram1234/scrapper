@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs</title>
+    <link href="/static/css/reset.css" rel="stylesheet"></link>
+    <link href="/static/css/index.css" rel="stylesheet"></link>
+</head>
+<body>
+    <header>
+        <h1>All jobs from 
+            <a href="https://programmers.co.kr/job" target="blank">programmers</a> and 
+            <a href="https://www.wanted.co.kr/wdlist/518" target="blank">wanted</a>
+        </h1>
+    </header>
+    <main>
+        <form action="/jobs" method="GET">
+            <input type="text" name="word" required/>
+            <input type="submit" value="Find jobs"/>
+        </form>
+    </main>
+    <div class="loading hidden">
+        <div class="spin"></div>
+        <div class="scrapping">Scrapping</div>
+    </div>
+    <footer>
+        <hr />
+        <p>github.com/daram1234</p>
+    </footer>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

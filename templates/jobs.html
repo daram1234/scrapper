@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jobs</title>
+    <link href="/static/css/reset.css" rel="stylesheet"></link>
+    <link href="/static/css/jobs.css" rel="stylesheet"></link>
+</head>
+<body>
+    <header>
+        {% if length != 0 %}
+        <h1>{{word}}: {{length}} jobs found.</h1>
+        <div class="button_wrap">
+            <button onclick="location.href='/export?word={{word}}'">Download File</button>
+        </div>
+        {% endif %}
+    </header>
+    <main>
+        {% if length == 0%}
+        <div id="noResults">
+          <h2>There is no job for {{lang}}</h2>
+          <a href="/">Go Back</a>
+        </div>
+        {% endif %}
+      
+        {% for job in jobs %}
+        <div class="job">
+          <h3>{{job['title']}}</h3>
+          <div class="info">
+            <h4>{{job['company']}}</h4>
+            <h5>{{job['location']}}</h5>
+          </div>
+          <a href ="{{job['link']}}" target="_blank">지원하기</a>
+        </div>
+        {% endfor %}
+    </main>
+    <footer>
+        <hr />
+        <p>github.com/daram1234</p>
+    </footer>
+</body>
+</html>
