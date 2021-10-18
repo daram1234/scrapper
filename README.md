@@ -1,9 +1,6 @@
 # scrapper
-https://nomadcoders.co/python-for-beginners/lobby
-다음 강의를 보고 만든 프로젝트
+https://job-scrapper.daram1234.repl.co/
 
-#### Skills
-- python
-- flask
-- bs4
-- selenium
+#### 참고
+https://nomadcoders.co/python-for-beginners/lobby  
+https://greeksharifa.github.io/references/2020/10/30/python-selenium-usage/
